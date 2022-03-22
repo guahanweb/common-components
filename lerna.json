@@ -1,0 +1,12 @@
+{
+  "packages": ["packages/*"],
+  "version": "independent",
+  "command": {
+    "version": {
+      "allowBranch": "main"
+    },
+    "publish": {
+      "ignoreChanges": ["*.md"]
+    }
+  }
+}

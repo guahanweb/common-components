@@ -1,0 +1,38 @@
+{
+  "name": "@guahanweb/ws-connector",
+  "version": "0.0.1",
+  "description": "WebSocket helper to monitor health, dedupe subscriptions, and manage communication",
+  "main": "dist/esm/ws-connector.js",
+  "types": "dist/ws-connector.d.ts",
+  "unpkg": "dist/ws-connector.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean:dist": "node ../../build/clean.js dist",
+    "build:rollup": "rollup -c",
+    "build:tsc": "tsc -p ./tsconfig.json",
+    "build": "npm run build:tsc && npm run build:rollup",
+    "dev": "tsc -p ./tsconfig.json -w",
+    "eslint": "eslint . --ext .ts",
+    "eslint:fix": "eslint . --ext .ts --fix",
+    "prepare": "npm run clean:dist && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:guahanweb/common-components.git"
+  },
+  "author": {
+    "name": "Garth Henson",
+    "email": "garth@guahanweb.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.2"
+  }
+}
